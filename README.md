@@ -1,8 +1,9 @@
 # Sujeito Pizzaria - Node.js Backend with TypeScript
 
-![Node.js](https://img.shields.io/badge/Node.js-v14.17.4-green)
-![TypeScript](https://img.shields.io/badge/TypeScript-v4.5.2-blue)
-![Express](https://img.shields.io/badge/Express-v4.17.1-lightgrey)
+![Node.js](https://img.shields.io/badge/Node.js-v16.17.1-green)
+![TypeScript](https://img.shields.io/badge/TypeScript-v5.1.6-blue)
+![Express](https://img.shields.io/badge/Express-v4.18.2-lightgrey)
+
 
 This is the backend component of the "Sujeito Pizzaria" project, developed as part of a course. It provides the server-side logic for managing a pizzeria's operations, including menu items, orders, and customer interactions.
 
