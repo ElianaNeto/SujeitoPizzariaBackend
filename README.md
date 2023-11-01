@@ -27,13 +27,13 @@ This is the backend component of the "Sujeito Pizzaria" project, developed as pa
 2. **Install dependencies:**
 
     ```bash
-    npm install
+    yarn install
     ```
 
 3. **Run the server:**
 
     ```bash
-    npm start
+    yarn run dev
     ```
 The server should now be running at http://localhost:3000.
 
@@ -144,10 +144,114 @@ sujeito-pizzaria-backend/
       }
     ```
 
+- **GET /list-category**
+  - Description: Get all categories.
+  - Request 
+    ```json
+      {
+        
+      }
 
+      "authentication": {
+        "type": "bearer",
+        "token": "YOUR_ACCESS_TOKEN",
+        "prefix": "Bearer"
+      },
+    ```
+
+  - Response
+    ```json
+      [
+        {
+          "id": "CATEGORY_ID",
+          "name": "Category name"
+        },
+        {
+          ...
+        }
+      ]
+    ```
 
 
 ### Products
+- **POST /product**
+  - Description: Create a product.
+  - Request 
+    ```json
+      {
+        "multipart_form_data": {
+          "name": "PRODUCT_NAME",
+          "price": "PRODUCT_PRICE",
+          "description": "PRODUCT_DESCRIPTION",
+          "file": "path/to/uploaded/file.jpg",
+          "category_id": "CATEGORY_ID"
+        }
+      }
+
+
+      // You will need to configurate the bearer 
+      "authentication": {
+        "type": "bearer",
+        "token": "YOUR_ACCESS_TOKEN",
+        "prefix": "Bearer"
+      },
+    ```
+  - Response 
+    ```json
+        {
+          "id": "PRODUCT_ID",
+          "name": "PRODUCT_NAME",
+          "price": "PRODUCT_PRICE",
+          "description": "PRODUCT_DESCRIPTION",
+          "banner": "19043958b156db6249efac836689b75a-681ce4883e44e134adfdaa9762e2ced0_XL.jpg",
+          "created_at": "2023-10-26T00:32:21.789Z",
+          "updated_at": "2023-10-26T00:32:21.789Z",
+          "category_id": "CATEGORY_ID"
+        }
+    ```
+    
+- **GET /category/product**
+  - Description: List products by category.
+  - Request 
+    ```bash
+    http://localhost:3333/category/product?category_id=CATEGORY_ID
+    
+    ```
+    ```json
+      {
+        
+      }
+
+      "authentication": {
+        "type": "bearer",
+        "token": "YOUR_ACCESS_TOKEN",
+        "prefix": "Bearer"
+      },
+    ```
+
+  - Response
+    ```json
+      [
+        {
+          "id": "PRODUCT_ID",
+          "name": "PRODUCT_NAME",
+          "price": "PRODUCT_PRICE",
+          "description": "PRODUCT_DESCRIPTION",
+          "banner": "19043958b156db6249efac836689b75a-681ce4883e44e134adfdaa9762e2ced0_XL.jpg",
+          "created_at": "2023-10-26T00:32:21.789Z",
+          "updated_at": "2023-10-26T00:32:21.789Z",
+          "category_id": "CATEGORY_ID"
+        },
+        {
+          ...
+        }
+      ]
+    ```
+
+
+
+
+
 ### Orders
 
 
