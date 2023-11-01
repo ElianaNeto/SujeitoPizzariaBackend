@@ -253,6 +253,35 @@ sujeito-pizzaria-backend/
 
 
 ### Orders
+- **POST /order**
+  - Description: Create an order.
+  - Request 
+    ```json
+      {
+        "table": TABLE_NUMBER
+      }
+
+
+      // You will need to configurate the bearer 
+      "authentication": {
+        "type": "bearer",
+        "token": "YOUR_ACCESS_TOKEN",
+        "prefix": "Bearer"
+      },
+    ```
+  - Response 
+    ```json
+        {
+          "id": "ORDER_ID",
+          "table": TABLE_NUMBER,
+          "status": false,
+          "draft": true,
+          "name": null,
+          "created_at": "2023-10-26T21:10:26.122Z",
+          "updated_at": "2023-10-26T21:10:26.122Z"
+        }
+    ```
+  
 
 
 
