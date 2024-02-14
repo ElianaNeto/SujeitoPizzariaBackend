@@ -5,7 +5,7 @@
 ![Express](https://img.shields.io/badge/Express-v4.18.2-lightgrey)
 
 
-This is the backend component of the "Sujeito Pizzaria" project, developed as part of a course. It provides the server-side logic for managing a pizzeria's operations, including menu items, orders, and customer interactions.
+This is the backend component of the "Sujeito Pizzaria" project. It provides the server-side logic for managing a pizzeria's operations, including menu items, orders, and customer interactions.
 
 ## Table of Contents
 
